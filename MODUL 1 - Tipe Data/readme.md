@@ -1,5 +1,5 @@
-# <p style="text-align: center;">Laporan Praktikum Modul Tipe Data</p>
-<p style="text-align: center;">Arvinanto Bahtiar</p>
+# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+<p align="center">Arvinanto Bahtiar</p>
 
 ## Dasar Teori
 
@@ -33,7 +33,7 @@ int main() {
     return 0;
 }
 ```
-Output:
+#### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar.
