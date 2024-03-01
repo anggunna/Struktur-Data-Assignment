@@ -1,5 +1,5 @@
-# <center>  Laporan Praktikum Modul Tipe Data</center>
-<center>Arvinanto Bahtiar</center>
+# <p style="text-align: center;">Laporan Praktikum Modul Tipe Data</p>
+<p style="text-align: center;">Arvinanto Bahtiar</p>
 
 ## Dasar Teori
 
