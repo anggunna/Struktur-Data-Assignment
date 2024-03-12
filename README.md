@@ -1,7 +1,7 @@
 ## Repository praktikum algoritma dan struktur data
 
 <pre>
-Nama : Arvinanto Bahtiar
-NIM : 2211110014
+Nama : Anggun Dewanti
+NIM : 2311110022
 Kelas : S1SD03-A
 </pre>
