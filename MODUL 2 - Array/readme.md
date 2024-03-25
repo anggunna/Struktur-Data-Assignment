@@ -2,89 +2,141 @@
 <p align="center">Anggun Dewanti (2311110022)</p>
 
 ## Dasar Teori
-Tipe data adalah sebuah komponen dari potongan data yang memberikan sinyal pada komputer terkait cara mengartikan data tersebut. Tipe data dalam struktur data merujuk pada jenis-jenis data yang dapat digunakan untuk menyimpan dan mengorganisir informasi.Tipe data merupakan bagian program yang paling penting karena tipe data mempengaruhi setiap instruksi yang akan dilaksanakan oleh computer.Berikut adalah beberapa fungsi utama dari tipe data dalam pemrograman:
-1. Menentukan Jenis Nilai, tipe data memiliki kisaran nilai yang dapat disimpan. 
-2. Mengatur Penggunaan Memori, tipe data menggunakan jumlah memori yang berbeda tergantung pada ukuran dan presisinya. 
-3. Mengatur Operasi dan Operasi yang Diperbolehkan, tipe data juga menentukan operasi apa yang dapat dilakukan terhadap nilai-nilai yang disimpan dalam variabel tersebut. 
+Array adalah suatu struktur yang terdiri dari sejumlah elemen yang memiliki tipe data yang sama. Elemen-elemen array tersusun secara sekuensial dalam memori komputer. Semua elemem array bertipe sama. Array cocok untuk organisasi kumpulan data homogen yang ukuran atau jumlah elemen maksimumnya telah diketahui dari awal. Homogen adalah bahwa setiap elemen dari sebuah array tertentu haruslah mempunyai tipe data yang sama [1].
 
-## Tipe Data Primitif
-Tipe data primitif biasanya digunakan untuk menyimpan nilai yang sederhana dan tidak kompleks seperti bilangan bulat, bilangan pecahan, karakter, dan nilai boolean. Berikut adalah daftar tipe data primitif yang umum digunakan di bahasa pemrograman C++:
-1. Tipe data untuk bilangan bulat (int). Perbedaan tipe data bilangan bulat ini terletak pada jangkauan nilai yang dapat disimpan pada setiap tipe data. seperti 1, 2, 3, dan seterusnya.
-2. Tipe data untuk bilangan pecahan/desimal (float), seperti 2.5, 3.14, dan seterusnya.
-3. Tipe data untuk karakter (char), tipe data char digunakan untuk menyatakan / menyimpan sebuah karakter Unicod seperti ‘a’, ‘b’, ‘c’, dan seterusnya.
-4. Tipe data untuk boolean (bool),tipe data bool digunakan untuk menampung nilai logika. Tipe data ini hanya bernilai bernilai benar yang direpresentasikan dengan true dan bernilai salah yang direpresentasikan dengan false.
+## Array Satu Dimensi
+Array satu dimensi yaitu kumpulan elemen-elemen identik yang hanya terdiri dari satu baris atau hanya satu kolom saja alamat penyimpanan data (indeks). Elemen-elemen tersebut memiliki tipe data yang sama, tetapi isi dari elemen tersebut boleh berbeda [2].
 
-## Tipe Data Abstrak
-Tipe data abstrak dalam C++ merujuk pada konsep yang memungkinkan pengguna untuk mendefinisikan tipe data baru yang lebih kompleks dan spesifik, yang tidak langsung tersedia dalam bahasa pemrograman tersebut. Beberapa contoh tipe data abstrak yang umum digunakan dalam pemrograman termasuk:
-1. Stack (Tumpukan): Stack adalah tipe data abstrak yang mengikuti prinsip LIFO (Last In, First Out), di mana elemen terakhir yang ditambahkan ke stack akan menjadi elemen pertama yang dihapus. Operasi utama yang dilakukan pada stack meliputi:
-push(): Menambahkan elemen ke atas stack.
-pop(): Menghapus dan mengembalikan elemen teratas dari stack, jika stack tidak kosong.
-peek(): Mengembalikan elemen teratas dari stack tanpa menghapusnya, jika stack tidak kosong.
-isEmpty(): Mengembalikan true jika stack kosong, dan false jika tidak.
-isFull(): Mengembalikan true jika stack penuh, dan false jika tidak.
-2. Queue (Antrian): Queue adalah tipe data abstrak yang mengikuti prinsip FIFO (First In, First Out), di mana elemen pertama yang ditambahkan ke queue akan menjadi elemen pertama yang dihapus. Operasi utama yang dilakukan pada queue meliputi:
-enqueue(): Menambahkan elemen ke akhir queue.
-dequeue(): Menghapus dan mengembalikan elemen pertama dari queue, jika queue tidak kosong.
-peek(): Mengembalikan elemen pertama dari queue tanpa menghapusnya, jika queue tidak kosong.
-size(): Mengembalikan jumlah elemen dalam queue.
-isEmpty(): Mengembalikan true jika queue kosong, dan false jika tidak.
-isFull(): Mengembalikan true jika queue penuh, dan false jika tidak.
-3. List (Daftar): List adalah tipe data abstrak yang memungkinkan penyimpanan elemen dalam urutan tertentu dan memungkinkan akses ke elemen melalui indeks atau pointer. List dapat diimplementasikan menggunakan array atau linked list. Dalam konteks array, list dapat dianggap sebagai array yang dapat menyimpan elemen dalam urutan tertentu dan memungkinkan akses ke elemen melalui indeks. Dalam konteks linked list, list dapat dianggap sebagai kumpulan node, di mana setiap node memiliki pointer ke elemen data dan pointer ke node berikutnya dalam list.
+Dalam bahasa pemrograman C++, tanda [ ] (kurung siku) digunakan untuk mendeklarasikan array satu dimensi. Format umum pendeklarasian array satu dimensi adalah sebagai berikut:
+tipe_data nama_array[jumlah_elemen];
 
-## Tipe Data Koleksi
-Tipe data koleksi adalah tipe data yang digunakan untuk menyimpan kumpulan elemen. Tipe data koleksi ini memungkinkan pengguna untuk mengelola dan mengakses elemen-elemen dalam kumpulan tersebut dengan cara yang berbeda-beda, tergantung pada jenis tipe data koleksi yang digunakan. Berikut adalah tipe data koleksi yang umum digunakan:
-1. Array adalah tipe data koleksi yang terdiri dari sejumlah komponen-komponen yang mempunyai tipe data yang sama. Array dapat berupa satu dimensi atau dua dimensi. Array satu dimensi memiliki indeks tunggal, sedangkan array dua dimensi memiliki indeks ganda. Array memungkinkan akses ke elemen melalui indeks yang menunjukkan posisi elemen dalam array.
-2. Array Asosiatif adalah tipe data koleksi yang terdiri dari kumpulan pasangan (kunci, nilai), di mana setiap kunci yang mungkin muncul paling sekali dalam koleksi. Operasi yang terkait dengan tipe data ini memungkinkan penambahan, penghapusan, modifikasi pasangan, dan pencarian nilai yang terkait dengan kunci tertentu. Array asosiatif dapat diimplementasikan menggunakan tabel hash atau pohon pencarian, dan memiliki banyak aplikasi termasuk pola pemrograman fundamental seperti memoization dan pola dekorator.
-3. List adalah tipe data koleksi yang digunakan untuk mengelompokkan bersama potongan informasi sehingga mereka jelas terkait satu sama lain dan mudah dibaca. List dapat berisi elemen dari berbagai tipe data dan memungkinkan akses ke elemen melalui indeks. List juga memungkinkan penambahan, penghapusan, dan modifikasi elemen.
-4. Tuple adalah tipe data koleksi yang digunakan untuk menyimpan lebih dari satu nilai dalam satu variabel secara sekaligus. Tuple bersifat ordered (terurut) dan juga bersifat unchangeable (tidak bisa diubah). Ini berarti datanya bisa kita akses menggunakan indeks, dan datanya tidak akan pernah bisa diubah setelah pertama kali definisikan. Dalam Python, tipe data tuple didefinisikan dengan tanda kurung ().
+Misalnya, jika kita ingin membuat sebuah array satu dimensi dengan nama LARIK yang terdiri dari 10 elemen bertipe data int, pendeklarasian array akan terlihat seperti ini:
+
+int LARIK [10];
+
+Jika kita ingin memberikan nilai awal saat pendeklarasian (inisialisasi), contohnya akan menjadi:
+
+int LARIK [10] = {2, 5, 4, 8, 1, 3, 7, 1, 10, 6};
+
+Dari pendeklarasian dan inisialisasi array LARIK di atas, kita sebenarnya meminta komputer untuk mengalokasikan ruang di memori sebanyak 10 tempat, dengan indeks mulai dari 0 hingga 9. Nilai-nilai tersebut akan diisi ke dalam elemen array secara berurutan, dimulai dari indeks 0 (nilai 2) hingga indeks 9 (nilai 6) [3].
+
+### Array Dua Dimensi
+Array dua dimensi sering digambarkan sebagai sebuah matriks, merupakan perluasan dari array satu dimensi. Jika array satu dimensi hanya terdiri dari sebuah baris dan beberapa kolom elemen, maka array dua dimensiterdiri dari beberapa baris dan beberapa kolom elemen bertipe sama sehingga dapat digambarkan [2].
+
+Untuk mendeklarasikan sebuah array dua dimensi dalam bahasa pemrograman C++, penggunaan tanda [ ] (kurung siku) diperlukan. Format umum pendeklarasian array dua dimensi adalah sebagai berikut:
+tipe_data nama_array[jumlah_elemen_baris][jumlah_elemen_kolom];
+
+Misalnya, jika kita ingin mendeklarasikan sebuah array dua dimensi dengan nama LARIK yang memiliki 3 baris dan 5 kolom, dan bertipe data int, maka pendeklarasian array akan terlihat seperti ini:
+int LARIK [3][5];
+
+Jika kita ingin memberikan nilai awal saat pendeklarasian (inisialisasi), contohnya akan seperti ini:
+int LARIK [3][5] = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15}};
+
+Dari pendeklarasian dan inisialisasi array LARIK di atas, kita meminta komputer untuk mengalokasikan ruang di memori sebanyak 15 tempat, dengan indeks dimulai dari LARIK[0][0] hingga LARIK[2][4]. Nilai-nilai tersebut akan dimasukkan ke dalam elemen array secara berurutan, dimulai dari LARIK[0][0] yang akan diisi dengan nilai 1, hingga LARIK[2][4] yang akan diisi dengan nilai 15 [4]. 
+
+### Array MultiDimensi
+Array ini seperti array dimensi dua tetapi dapat memiliki ukuran yang lebih besar. Sebenarnya array dimensi banyak ini tidak terlalu sering digunakan, tetapi sewaktu-waktu kalau dimensi yang dibutuhkan banyak, maka array ini sangat memegang peranan yang penting[2].
+
+Array multidimensi umumnya merujuk pada array yang memiliki lebih dari dua subskrip. Pendeklarasian array multidimensi memiliki format yang sama dengan pendeklarasi array satu dimensi atau dua dimensi. Sebagai contoh, untuk mendeklarasikan array multidimensi dengan tiga subskrip (atau disebut juga array tiga dimensi), dengan nama LARIK, yang memiliki ukuran 1 sebanyak 2, ukuran 2 sebanyak 3, dan ukuran 3 sebanyak 4, serta bertipe data int, pendeklarasiannya akan seperti berikut:
+
+tipe_data nama_array[ukuran_1][ukuran_2]...[ukuran_N];
+
+int LARIK[2][3][4];
+
+int LARIK[2][3][4] = {{{1,2,3,4},{5,6,7,8},{9,10,11,12}}, {{13,14,15,16},{17,18,19,20},{21,22,23,24}}};
+
+Dari pendeklarasian dan inisialisasi array LARIK di atas, kita mengalokasikan ruang di memori sebanyak 24 tempat, dengan indeks dimulai dari LARIK[0][0][0] hingga LARIK[1][2][3]. Nilai-nilai tersebut akan dimasukkan ke dalam elemen array secara berurutan, dimulai dari LARIK[0][0][0] yang akan diisi dengan nilai 1, hingga LARIK[1][2][3] yang akan diisi dengan nilai 24 [5].
+
 ## Guided 
+## Guided-1
+### Input
+![guided-1(input)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/ef2f6d33-9ddc-4d0c-a60f-ef6ab0887912)
+### Output
+![guided-1(output)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/d49f31d6-89e1-4e4e-b201-2b6944ef951b)
+Kode tersebut merupakan untuk meminta pengguna memasukkan nilai-nilai ke dalam array tiga dimensi, kemudian menampilkan kembali nilai-nilai tersebut. Program tersebut menggunakan tiga loop bersarang untuk iterasi melalui semua elemen array dan memungkinkan pengguna memasukkan nilai. Setelah semua nilai dimasukkan, program menampilkan kembali nilai-nilai array tersebut ke layar.
+Lebih ringkasnya, program ini:
+1. Meminta pengguna memasukkan nilai-nilai ke dalam array tiga dimensi.
+2. Menampilkan kembali nilai-nilai array yang dimasukkan oleh pengguna.
 
-### 1. Tipe Data Primitif
+Kesimpulan: Program ini memberikan pengguna kemampuan untuk memasukkan dan menampilkan nilai-nilai dalam array tiga dimensi. Program ini menggunakan loop bersarang untuk mengakses dan menampilkan setiap elemen array secara efisien.
 
-![guided-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/bb564898-aa71-48c7-95e6-1dfaf3fe8092)
-Kode diatas adalah contoh penggunaan tipe data primitif sederhana yaitu, kode menerima input berupa tipe operator, bilangan 1 dan bilangan 2. Selanjutnya ketika kode tersebut dijalankan user akan diminta untuk memasukkan data yang diminta dan akan melakukan operasi yang dipilih dengan teknik switch dan case.
+## Guided-2
+![guided-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/3ced6f17-1a5e-47b7-8409-b25de86f2382)
+Kode tersebut merupakan untuk meminta pengguna memasukkan nilai-nilai ke dalam array, kemudian mencari nilai maksimum dari array tersebut dan menampilkan nilai maksimum beserta posisinya dalam array.
+Lebih ringkasnya, program ini:
+1. Meminta pengguna memasukkan panjang array dan nilai-nilai untuk setiap elemen array.
+2. Menggunakan loop untuk mencari nilai maksimum dari array dan menyimpannya beserta posisinya.
+3. Menampilkan nilai maksimum beserta posisinya dalam array.
 
-### 2. Tipe Data Abstrak
-![guided-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/fe17d7ec-aceb-4f01-b5b4-bc9a87f53b72)
-Kode diatas adalah contoh penggunaan tipe data abstrak. Pertama kode tersebut membuat class mahasiswa menggunakan keyword struct dan mendeklarasi 3 atribut dalam kelas tersebut yaitu name, address dan age. Selanjutnya pada fungsi main(), beberapa objek dibuat berdasarkan class yang sudah didefinisi sebelumnya dan mencetak objek yang sudah dibuat.
+Kesimpulan: Program ini memberikan pengguna kemampuan untuk memasukkan nilai-nilai ke dalam array dan menemukan nilai maksimum dari array tersebut. Program ini menggunakan loop untuk mencari nilai maksimum dan menyajikannya dalam output.
 
-### 3. Tipe Data Koleksi
-![guided-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/c6aad61b-476d-482e-bb98-224d6628a627)
-Kode diatas menggunakan array untuk menampung 5 elemen integer selanjutnya setiap elemen dari array tersebut dicetak satu-persatu menggunakan keyword atau statement cout.
 
 ## Unguided 
 
 ### 1. [Soal]
-![soal-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/f530ce71-5852-4f3b-b653-46ed75857c60)
+![soal-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/911e1239-4376-48fd-9468-029579aa0800)
+
+#### Input:
+![unguided-1(input)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/efc7abfb-e6e8-49c2-9a38-b4eb6733b46d)
 
 #### Output:
-![unguided-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/e3b5d4ea-9292-4dc3-84ef-d645411deeee)
-Kode diatas memiliki 2 fungsi utama yaitu menghitung luas persegi dan luas persegi panjang. Kedua fungsi tersebut dilakukan deklarasi pada awal kode dengan fungsi hitung luas persegi yang memiliki 1 parameter sisi dan fungsi hitung luas persegi panjang yang memiliki 2 parameter yaitu panjang dan lebar. Pada fungsi main() argument dari seluruh parameter tersebut dibuat dengan memasukkan data satu persatu yang seterusnya dilakukan pemanggilan fungsi dan mencetak keluaran yang dihasilkan.
+![unguided-1(output)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/8b3db594-3ea3-490f-add8-5d05efe30a6f)
+
+#### Kesimpulan :
+Kode tersebut adalah program C++ yang meminta pengguna memasukkan data array dalam satu baris, kemudian memisahkan nomor genap dan ganjil dari data tersebut, dan menampilkan kembali data array, nomor genap, dan nomor ganjil.
+
+Lebih ringkasnya, program ini:
+1. Meminta pengguna memasukkan data array dalam satu baris.
+2. Memisahkan nomor genap dan ganjil dari data array.
+3. Menampilkan kembali data array, nomor genap, dan nomor ganjil.
+
 
 ### 2. [Soal]
-![soal-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/1ce35fdf-5bea-400b-bd08-1e3bcad1cc31)
+![soal-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/6af39ffd-0777-48e1-b283-e60268c7c04c)
+
+#### Input
+![unguided-2(input)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/63a70d00-982f-4c0f-9541-97172c62e7bf)
 
 #### Output:
-![unguided-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/fca1f570-5c89-4cea-b9e5-5f3e67f38432)
-Kode diatas adalah contoh penggunaan struct dan class. Struct kucing dibuat dengan 3 atribut yaitu nama ras dan umur, nama memiliki tipe data konstan karakter begitu juga dengan ras, sedangkan umur memiliki tipe data integer atau bilangan bulat. Pada fungsi main() objek-objek dari Struct Kucing dibuat dengan nama cat1 hingga cat3 yang selanjutnya dilakukan pencetakan data dari setiap objek yang dibuat. Dalam bahasa pemrograman c++ struct dan class memungkinkan anda untuk membuat struktur data yang kompleks. Keduanya dapat mendefinisikan tipe data baru yang memiliki anggota dan fungsi anggota yang terkait dengannya.
+![unguided-2(output)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/8a8c7bec-58a9-44c9-a227-8b278c1511d1)
 
-### 2. [Soal]
-![soal-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/b86005ee-4f5c-44f7-ad58-8e35e775fd2f)
+#### Kesimpulan :
+Kode tersebut adalah program sederhana dalam bahasa C++ untuk mencari nilai maksimum dari sebuah array yang dimasukkan oleh pengguna.
+
+Lebih ringkasnya, program ini:
+1. Meminta pengguna memasukkan panjang array.
+2. Meminta pengguna memasukkan nilai untuk setiap elemen array.
+3. Mencari nilai maksimum dari array yang dimasukkan.
+4. Menampilkan nilai maksimum beserta posisinya dalam array.
+
+
+### 3. [Soal]
+![soal-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/2ecf39d2-5612-4444-ae55-878553a3e075)
+
+#### Input:
+![unguided-3(input)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/4885d8f4-3b62-43e0-8e6c-f76ec319f3c8)
 
 #### Output:
-![unguided-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/2feb5845-d15e-4629-9d71-5899c3d4a852)
-Kode diatas adalah contoh penggunaan tipe data vektor. Fungsi yang memberikan keluaran integer dideklarasi pada awal kode yang melakukan operasi perkalian. Fungsi tersebut menerima satu parameter bernama x. Pada fungsi main() sebuah variabel numbers dibuat dengan tipe data vektor yang memiliki 5 elemen. Selanjutnya fungsi transform digunakan untuk memproses setiap data pada vektor numbers agar dilakuakn perkalian menggunakan fungsi multiplyByTwo yang sebelumnya sudah dideklarasi. Terakhir dilakukan perulangan pada doubledNumbers yang mana variabel tersebut merupakan hasil dari pemrosesan sebelumnya. Pada perulangan tersebut seluruh elemen dicetak satu-persatu.
+![unguided-3(output)](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/103c518a-c690-4a89-a79c-82b1137685f7)
 
 ## Kesimpulan
-Berikut adalah ringkasan dan interpretasi umum tentang tipe data dalam bahasa C++ berdasarkan praktikum dan  tugas yang diberikan:
+Kode tersebut adalah program C++ yang memungkinkan pengguna untuk memasukkan ukuran array, elemen-elemen array, dan kemudian memilih untuk mencari nilai maksimum, minimum, atau rata-rata dari array tersebut.
 
-C++ memiliki tipe data primitif seperti int, float, char, dan bool, yang digunakan untuk menyimpan nilai sederhana seperti bilangan bulat, pecahan, karakter, dan kebenaran. Selain itu, C++ juga mendukung struktur data kompleks seperti array, struct, dan class. Array dan vektor, sebagai tipe data koleksi, memungkinkan penyimpanan sejumlah nilai dalam satu variabel, dengan vektor lebih dinamis karena dapat mengubah ukurannya saat runtime. 
+Lebih ringkasnya, program ini:
+1. Meminta pengguna memasukkan ukuran array dan elemen-elemen array.
+2. Menampilkan menu yang berisi pilihan untuk mencari nilai maksimum, minimum, atau rata-rata dari array.
+3. Meminta pengguna memilih operasi yang ingin dilakukan.
+4. Menghitung dan menampilkan nilai maksimum, minimum, atau rata-rata dari array sesuai dengan pilihan pengguna.
+5. Menampilkan pesan kesalahan jika pilihan pengguna tidak valid.
 
-Fungsi dalam C++ adalah blok kode yang dapat dipanggil dengan suatu nama, bisa mengembalikan nilai atau tidak, dan menerima parameter. Penggunaan std::map untuk menyimpan pasangan kunci-nilai memberikan cara efisien untuk pencarian berbasis kunci. Pentingnya memilih tipe data yang tepat dalam pemrograman untuk efisiensi dan kejelasan kode sangatlah penting, karena pemahaman tentang tipe data memungkinkan pemrogram membuat keputusan yang tepat dalam penyimpanan dan manipulasi data.
 
 ## Referensi
-[1] Anita Sindar (2019). Struktur Data dan Algoritma Dengan C++. Sumatra Utara : CV. AA. RIZKY.
-[2] Meidyan Permata Putri, Guntoro Barovih, Rezania Agramanisti Azdy, Yuniansyah, Andri Saputra, Yesi Sriyeni, Arsia Rini, Fadhila Tangguh Admojo. Bandung : Grup CV. Widina Media Utama.
-[3] Antonius Rachmat C. (2010). Algoritma dan Pemrograman dengan Bahasa C. Yogyakarta: AndiOffset.
-[4] Pemburukode.com. (2023, 16 Februari). Pengenalan Tentang Tipe Data Primitif dan Bukan Primitif di Bahasa Pemrograman C++. 
-[5] GeeksforGeeks. (2024, 11 Maret). Abstract Data Types.
+[1] Pratama, M. A. (2020, March 29). STRUKTUR DATA ARRAY DUA DIMENSI  PADA PEMROGRAMAN C++. https://doi.org/10.31219/osf.io/vyech
+
+[2] lestari, K. (2019, March 29). STUKTUR DATA STATIS ARRAY. https://doi.org/10.31219/osf.io/mx6cp
+
+[3] https://www.materidosen.com/2017/06/array-satu-dimensi-c-lengkap-contoh.html
+
+[4] https://www.materidosen.com/2017/06/array-dua-dimensi-c-lengkap-contoh.html
+
+[5] https://www.materidosen.com/2017/06/array-multidimensi-dimensi-c-lengkap.html
