@@ -1,90 +1,115 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
 <p align="center">Anggun Dewanti (2311110022)</p>
 
 ## Dasar Teori
-Tipe data adalah sebuah komponen dari potongan data yang memberikan sinyal pada komputer terkait cara mengartikan data tersebut. Tipe data dalam struktur data merujuk pada jenis-jenis data yang dapat digunakan untuk menyimpan dan mengorganisir informasi.Tipe data merupakan bagian program yang paling penting karena tipe data mempengaruhi setiap instruksi yang akan dilaksanakan oleh computer.Berikut adalah beberapa fungsi utama dari tipe data dalam pemrograman:
-1. Menentukan Jenis Nilai, tipe data memiliki kisaran nilai yang dapat disimpan. 
-2. Mengatur Penggunaan Memori, tipe data menggunakan jumlah memori yang berbeda tergantung pada ukuran dan presisinya. 
-3. Mengatur Operasi dan Operasi yang Diperbolehkan, tipe data juga menentukan operasi apa yang dapat dilakukan terhadap nilai-nilai yang disimpan dalam variabel tersebut. 
+Sorting adalah proses mengatur elemen-elemen dalam sebuah himpunan data menjadi urutan tertentu, seperti urutan menaik atau menurun, berdasarkan kriteria tertentu. Tujuan utama dari sorting adalah untuk menyusun data dalam suatu urutan yang teratur sehingga memudahkan untuk pencarian, pengolahan, dan analisis data. Proses sorting sangat umum digunakan dalam berbagai bidang, termasuk pemrosesan data, pengembangan perangkat lunak, analisis data, dan banyak lagi. Sorting adalah salah satu operasi dasar dalam pengembangan algoritma dan pemrograman komputer, dan ada banyak algoritma yang dirancang khusus untuk melakukan tugas ini dengan efisien, tergantung pada jenis data yang diurutkan dan kebutuhan spesifik dari aplikasi yang bersangkutan[2].  Ada berbagai jenis metode sorting data yang kita kenal, antara lain Bubble Sort, Selection Sort, Insertion Sort, Quick Sort, Shell Sort, dan Heap Sort. Semua metode ini memiliki kelebihan dan kelemahan masing-masing, penggunaannya ditentukan berdasarkan kebutuhan. Setiap metode memiliki algoritma yang berbeda, di mana perbedaan dalam algoritma ini memengaruhi waktu eksekusi[5].
 
-## Tipe Data Primitif
-Tipe data primitif biasanya digunakan untuk menyimpan nilai yang sederhana dan tidak kompleks seperti bilangan bulat, bilangan pecahan, karakter, dan nilai boolean. Berikut adalah daftar tipe data primitif yang umum digunakan di bahasa pemrograman C++:
-1. Tipe data untuk bilangan bulat (int). Perbedaan tipe data bilangan bulat ini terletak pada jangkauan nilai yang dapat disimpan pada setiap tipe data. seperti 1, 2, 3, dan seterusnya.
-2. Tipe data untuk bilangan pecahan/desimal (float), seperti 2.5, 3.14, dan seterusnya.
-3. Tipe data untuk karakter (char), tipe data char digunakan untuk menyatakan / menyimpan sebuah karakter Unicod seperti ‘a’, ‘b’, ‘c’, dan seterusnya.
-4. Tipe data untuk boolean (bool),tipe data bool digunakan untuk menampung nilai logika. Tipe data ini hanya bernilai bernilai benar yang direpresentasikan dengan true dan bernilai salah yang direpresentasikan dengan false.
+## Insertion Sort 
+Sorting adalah teknik yang digunakan untuk menyusun data dalam urutan tertentu. Insertion Sort membagi array menjadi dua bagian, memindahkan satu elemen pada setiap iterasi dari bagian yang belum diurutkan ke bagian yang sudah diurutkan, hingga seluruh array diurutkan.Sorting diterapkan untuk menyusun kembali elemen-elemen dalam urutan numerik seperti urutan menaik atau menurun, atau untuk kata-kata dalam urutan abjad. Maka, kami mengusulkan algoritma pengurutan efisien yang dikenal sebagai algoritma Pengurutan Sisipan Bidireksional yang Ditingkatkan yang dikembangkan dari konsep insertion sorting. Analisis perbandingan dilakukan untuk algoritma Pengurutan Sisipan Bidireksional yang Ditingkatkan yang diusulkan dengan algoritma pengurutan insertion sorting. Dibandingkan dengan algoritma insertion sort, algoritma yang diusulkan mengungguli dengan jumlah perbandingan yang lebih sedikit dalam kasus terburuk dan waktu komputasi kasus rata-rata. Algoritma yang diusulkan bekerja efisien untuk elemen-elemen yang diduplikasi, yang merupakan peningkatan canggih, dan hasilnya terbukti[1].
 
-## Tipe Data Abstrak
-Tipe data abstrak dalam C++ merujuk pada konsep yang memungkinkan pengguna untuk mendefinisikan tipe data baru yang lebih kompleks dan spesifik, yang tidak langsung tersedia dalam bahasa pemrograman tersebut. Beberapa contoh tipe data abstrak yang umum digunakan dalam pemrograman termasuk:
-1. Stack (Tumpukan): Stack adalah tipe data abstrak yang mengikuti prinsip LIFO (Last In, First Out), di mana elemen terakhir yang ditambahkan ke stack akan menjadi elemen pertama yang dihapus. Operasi utama yang dilakukan pada stack meliputi:
-push(): Menambahkan elemen ke atas stack.
-pop(): Menghapus dan mengembalikan elemen teratas dari stack, jika stack tidak kosong.
-peek(): Mengembalikan elemen teratas dari stack tanpa menghapusnya, jika stack tidak kosong.
-isEmpty(): Mengembalikan true jika stack kosong, dan false jika tidak.
-isFull(): Mengembalikan true jika stack penuh, dan false jika tidak.
-2. Queue (Antrian): Queue adalah tipe data abstrak yang mengikuti prinsip FIFO (First In, First Out), di mana elemen pertama yang ditambahkan ke queue akan menjadi elemen pertama yang dihapus. Operasi utama yang dilakukan pada queue meliputi:
-enqueue(): Menambahkan elemen ke akhir queue.
-dequeue(): Menghapus dan mengembalikan elemen pertama dari queue, jika queue tidak kosong.
-peek(): Mengembalikan elemen pertama dari queue tanpa menghapusnya, jika queue tidak kosong.
-size(): Mengembalikan jumlah elemen dalam queue.
-isEmpty(): Mengembalikan true jika queue kosong, dan false jika tidak.
-isFull(): Mengembalikan true jika queue penuh, dan false jika tidak.
-3. List (Daftar): List adalah tipe data abstrak yang memungkinkan penyimpanan elemen dalam urutan tertentu dan memungkinkan akses ke elemen melalui indeks atau pointer. List dapat diimplementasikan menggunakan array atau linked list. Dalam konteks array, list dapat dianggap sebagai array yang dapat menyimpan elemen dalam urutan tertentu dan memungkinkan akses ke elemen melalui indeks. Dalam konteks linked list, list dapat dianggap sebagai kumpulan node, di mana setiap node memiliki pointer ke elemen data dan pointer ke node berikutnya dalam list.
+## Bubble Sort
+Bubble sort adalah metode pengurutan data dengan cara menukar data pada data pertama dan data pada data pertama Tetap duduk di sebelahnya sampai Anda yakin tidak akan ada lagi perubahan atau pertukaran dalam iterasi tertentu. Algoritma menggunakan perbandingan dalam operasi antar elemen. Algoritma bubble sort adalah algoritma pengurutan yang paling dasar, dan metode pengurutan juga yang paling sederhana daripada algoritma pengurutan lainnya[4].
 
-## Tipe Data Koleksi
-Tipe data koleksi adalah tipe data yang digunakan untuk menyimpan kumpulan elemen. Tipe data koleksi ini memungkinkan pengguna untuk mengelola dan mengakses elemen-elemen dalam kumpulan tersebut dengan cara yang berbeda-beda, tergantung pada jenis tipe data koleksi yang digunakan. Berikut adalah tipe data koleksi yang umum digunakan:
-1. Array adalah tipe data koleksi yang terdiri dari sejumlah komponen-komponen yang mempunyai tipe data yang sama. Array dapat berupa satu dimensi atau dua dimensi. Array satu dimensi memiliki indeks tunggal, sedangkan array dua dimensi memiliki indeks ganda. Array memungkinkan akses ke elemen melalui indeks yang menunjukkan posisi elemen dalam array.
-2. Array Asosiatif adalah tipe data koleksi yang terdiri dari kumpulan pasangan (kunci, nilai), di mana setiap kunci yang mungkin muncul paling sekali dalam koleksi. Operasi yang terkait dengan tipe data ini memungkinkan penambahan, penghapusan, modifikasi pasangan, dan pencarian nilai yang terkait dengan kunci tertentu. Array asosiatif dapat diimplementasikan menggunakan tabel hash atau pohon pencarian, dan memiliki banyak aplikasi termasuk pola pemrograman fundamental seperti memoization dan pola dekorator.
-3. List adalah tipe data koleksi yang digunakan untuk mengelompokkan bersama potongan informasi sehingga mereka jelas terkait satu sama lain dan mudah dibaca. List dapat berisi elemen dari berbagai tipe data dan memungkinkan akses ke elemen melalui indeks. List juga memungkinkan penambahan, penghapusan, dan modifikasi elemen.
-4. Tuple adalah tipe data koleksi yang digunakan untuk menyimpan lebih dari satu nilai dalam satu variabel secara sekaligus. Tuple bersifat ordered (terurut) dan juga bersifat unchangeable (tidak bisa diubah). Ini berarti datanya bisa kita akses menggunakan indeks, dan datanya tidak akan pernah bisa diubah setelah pertama kali definisikan. Dalam Python, tipe data tuple didefinisikan dengan tanda kurung ().
+## Selection Sort
+Selection sort (pengurutan dengan memilih) adalah proses pengurutan data menurut aturan tertentu agar terurut secara teratur. Pengurutan data yang terdiri dari beberapa kriteria memiliki prioritas dimana data tersebut diurutkan dengan menyediakan fungsi sort untuk mengurutkan data array dalam urutan naik atau turun dari nilai terkecil ke terbesar. Fungsi sort adalah mengurutkan data dari angka terkecil hingga terbesar atau huruf terakhir dari huruf pertama setiap kata memprioritaskan huruf lalu angka jika data dalam tabel tersebut terdiri dari data campuran angka dan huruf. Metode yang digunakan adalah mencari elemen terkecil dari array dan menukarnya dengan elemen di posisi pertama, kemudian algoritma ini mengulangi hal yang sama lagi, yaitu mencari elemen di posisi kedua, Proses yang akan dihasilkan dari sistem ini berlanjut sampai semua elemen array berhasil diurutkan[3].
+
 ## Guided 
 
-### 1. Tipe Data Primitif
+### 1. Mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort
 
-![guided-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/bb564898-aa71-48c7-95e6-1dfaf3fe8092)
-Kode diatas adalah contoh penggunaan tipe data primitif sederhana yaitu, kode menerima input berupa tipe operator, bilangan 1 dan bilangan 2. Selanjutnya ketika kode tersebut dijalankan user akan diminta untuk memasukkan data yang diminta dan akan melakukan operasi yang dipilih dengan teknik switch dan case.
+![guided-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/309b1261-3d6e-437b-84da-8c51d2f967c5)
 
-### 2. Tipe Data Abstrak
-![guided-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/fe17d7ec-aceb-4f01-b5b4-bc9a87f53b72)
-Kode diatas adalah contoh penggunaan tipe data abstrak. Pertama kode tersebut membuat class mahasiswa menggunakan keyword struct dan mendeklarasi 3 atribut dalam kelas tersebut yaitu name, address dan age. Selanjutnya pada fungsi main(), beberapa objek dibuat berdasarkan class yang sudah didefinisi sebelumnya dan mencetak objek yang sudah dibuat.
+#### Interpretasi
+Kode diatas adalah contoh mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort, yang berarti mengurutkan dari nilai terkecil ke nilai terbesar. Pada fungsi `bubble_sort`, setiap pasangan elemen dalam array diperiksa, dan jika elemen pertama lebih besar dari elemen kedua, keduanya ditukar posisinya. Proses ini terus berulang sampai tidak ada lagi pertukaran yang perlu dilakukan, menandakan bahwa array sudah diurutkan. Fungsi `print_array` digunakan untuk mencetak isi array ke layar sebelum dan sesudah pengurutan. Dalam fungsi `main`, sebuah array yang berisi data numerik telah dideklarasikan dan diinisialisasi. Setelah diurutkan menggunakan fungsi `bubble_sort`, hasilnya dicetak kembali ke layar. Dengan menggunakan algoritma Bubble Sort, data numerik dapat diurutkan dengan baik dan efisien secara ascending.
 
-### 3. Tipe Data Koleksi
-![guided-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/c6aad61b-476d-482e-bb98-224d6628a627)
-Kode diatas menggunakan array untuk menampung 5 elemen integer selanjutnya setiap elemen dari array tersebut dicetak satu-persatu menggunakan keyword atau statement cout.
+#### Kompleksitas waktu & ruang
+1. Analisis Kompleksitas Waktu Bubble Sort:
+  Algoritma bubble sort melakukan iterasi  berulang hingga tidak diperlukan lagi permutasi. Pada setiap iterasi, algoritme membandingkan setiap pasangan elemen berurutan dalam array dan menukarnya jika tidak berurutan. Jumlah iterasi yang diperlukan  tergantung pada jumlah swap yang dilakukan. Jumlah swap ditentukan oleh urutan asli  elemen dalam array. Dalam kasus terburuk, algoritma  memerlukan waktu O(n^2). n adalah jumlah elemen dalam array. Hal ini karena pada setiap iterasi algoritma memeriksa semua elemen dan terkadang melakukan swap pada setiap pasangan elemen. Dalam kasus terbaik, jika array sudah diurutkan, algoritme hanya membutuhkan waktu O(n) karena hanya diperlukan satu iterasi  untuk memastikan tidak terjadi pertukaran.
+2. Analisis Kompleksitas Ruang Bubble Sort:
+  Ruang yang dibutuhkan oleh algoritma Bubble Sort terutama tergantung pada jumlah elemen dalam array. Algoritma ini menggunakan ruang konstan tambahan, yaitu variabel sementara untuk menukar elemen dalam array. Oleh karena itu, kompleksitas ruangnya adalah O(1), yang berarti ruang yang dibutuhkan tidak bergantung pada ukuran array.
+
+#### Kesimpulan
+Dengan demikian, secara keseluruhan, kompleksitas waktu Bubble Sort adalah O(n^2) dalam kasus terburuk, dan kompleksitas ruangnya adalah O(1). Ini menunjukkan bahwa algoritma ini mungkin tidak efisien untuk array besar karena memerlukan waktu yang lebih lama untuk diurutkan.
+
+
+### 2. Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
+![guided-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/e6d50592-6ce9-41e5-8c2b-698c8a03ffa0)
+
+#### Interpretasi
+Kode diatas adalah contoh mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort,ang berarti mengurutkan dari nilai terbesar ke nilai terkecil. Insertion Sort adalah algoritma pengurutan yang membagi array menjadi dua bagian yaitu bagian yang sudah diurutkan dan bagian yang belum diurutkan. Pada bagian while (j > 0 && arr[j - 1] < arr[j]), seharusnya kondisi yang benar adalah arr[j - 1] < arr[j] untuk mengurutkan secara descending, tetapi disini kondisi yang digunakan sebaliknya. Setelah kode dijalankan, kita akan melihat bahwa elemen-elemen array akan dicetak dalam urutan yang sama sebelum dan sesudah pengurutan.
+
+#### Kompleksitas waktu & ruang
+1. Analisis Kompleksitas Waktu Insertion Sort :
+  Pada setiap iterasi, algoritma mencari tempat yang tepat untuk memasukkan elemen ke dalam array yang sudah diurutkan. Dalam kasus terburuk, algoritma memerlukan waktu O(n^2), di mana n adalah jumlah elemen dalam array, karena pada setiap iterasi, algoritma mungkin harus membandingkan elemen yang akan dimasukkan dengan setiap elemen dalam array yang sudah diurutkan.
+2. Analisis Kompleksitas Ruang Insertion Sort :
+  Algoritma ini menggunakan ruang konstan tambahan, yaitu variabel sementara untuk menukar elemen dalam array. Oleh karena itu, kompleksitas ruangnya adalah O(1), yang berarti ruang yang dibutuhkan tidak bergantung pada ukuran array.
+
+#### Kesimpulan
+Dengan demikian, secara keseluruhan, kompleksitas waktu Insertion Sort adalah O(n^2) dalam kasus terburuk, dan kompleksitas ruangnya adalah O(1). Ini menunjukkan bahwa algoritma ini mungkin tidak efisien untuk array besar karena memerlukan waktu yang lebih lama untuk diurutkan.
 
 ## Unguided 
 
 ### 1. [Soal]
-![soal-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/f530ce71-5852-4f3b-b653-46ed75857c60)
+![soal-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/95eacd32-98cb-4abe-bcb3-b7d7a5e46143)
 
 #### Output:
-![unguided-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/e3b5d4ea-9292-4dc3-84ef-d645411deeee)
-Kode diatas memiliki 2 fungsi utama yaitu menghitung luas persegi dan luas persegi panjang. Kedua fungsi tersebut dilakukan deklarasi pada awal kode dengan fungsi hitung luas persegi yang memiliki 1 parameter sisi dan fungsi hitung luas persegi panjang yang memiliki 2 parameter yaitu panjang dan lebar. Pada fungsi main() argument dari seluruh parameter tersebut dibuat dengan memasukkan data satu persatu yang seterusnya dilakukan pemanggilan fungsi dan mencetak keluaran yang dihasilkan.
+![unguided-1](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/8debcf38-fec7-4757-95e1-2fd796dba0db)
+
+#### Interpretasi
+Kode diatas adalah implementasi dari algoritma Selection Sort , Maka fungsi ini menerima sebuah array arr yang berisi nilai-nilai float yang akan diurutkan dan sebuah integer n yang merupakan jumlah elemen dalam array. Jumlah elemen dalam array dihitung menggunakan ekspresi sizeof(arr) / sizeof(arr[0]), yang akan menghasilkan jumlah elemen dalam array.Maka, Kode tersebut akan menghasilkan output yang menampilkan nilai-nilai IPS yang diurutkan secara menaik. Menunjukkan bahwa nilai IPS telah diurutkan dari yang terkecil (2.4) hingga yang terbesar (4.0) menggunakan algoritma Selection Sort.
+
+#### Kompleksitas waktu & ruang
+1. Analisis Kompleksitas Waktu Selection Sort:
+  Algoritma ini memiliki dua loop bersarang, yaitu loop luar untuk mengiterasi melalui setiap elemen dalam array, dan loop dalam untuk mencari elemen terkecil dalam bagian yang belum diurutkan. Algoritma memerlukan waktu O(n^2), di mana n adalah jumlah elemen dalam array, karena pada setiap iterasi, algoritma harus membandingkan setiap elemen dengan elemen-elemen lain dalam bagian yang belum diurutkan.
+2. Analisis Kompleksitas Ruang
+  Algoritma ini menggunakan ruang konstan tambahan, yaitu variabel sementara untuk menukar elemen dalam array. Oleh karena itu, kompleksitas ruangnya adalah O(1), yang berarti ruang yang dibutuhkan tidak bergantung pada ukuran array.
+
+#### Kesimpulan
+Dengan demikian, secara keseluruhan, kompleksitas waktu Selection Sort adalah O(n^2) dalam kasus terburuk dan rata-rata, dan kompleksitas ruangnya adalah O(1). Ini menunjukkan bahwa algoritma ini mungkin tidak efisien untuk array besar karena memerlukan waktu yang lebih lama untuk diurutkan.
 
 ### 2. [Soal]
-![soal-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/1ce35fdf-5bea-400b-bd08-1e3bcad1cc31)
+![soal-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/1df66207-8b44-4c40-9577-8662d447d108)
 
 #### Output:
-![unguided-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/fca1f570-5c89-4cea-b9e5-5f3e67f38432)
-Kode diatas adalah contoh penggunaan struct dan class. Struct kucing dibuat dengan 3 atribut yaitu nama ras dan umur, nama memiliki tipe data konstan karakter begitu juga dengan ras, sedangkan umur memiliki tipe data integer atau bilangan bulat. Pada fungsi main() objek-objek dari Struct Kucing dibuat dengan nama cat1 hingga cat3 yang selanjutnya dilakukan pencetakan data dari setiap objek yang dibuat. Dalam bahasa pemrograman c++ struct dan class memungkinkan anda untuk membuat struktur data yang kompleks. Keduanya dapat mendefinisikan tipe data baru yang memiliki anggota dan fungsi anggota yang terkait dengannya.
+![unguided-2](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/ec794742-5bb1-4f65-9011-1377bfdcdc2e)
 
-### 2. [Soal]
-![soal-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/b86005ee-4f5c-44f7-ad58-8e35e775fd2f)
+#### Interpretasi
+Kode diatas berfungsi untuk menerima sebuah vektor string sebagai parameter dan mengurutkannya menggunakan algoritma Bubble Sort Dan include Libraries, menggunakan tiga library yaitu iostream untuk input-output, vector untuk struktur data dinamis, dan algorithm untuk fungsi swap. Di dalam fungsi main, sebuah vektor names dibuat dan diisi dengan daftar nama yang belum terurut. Maka hasilnya adalah daftar nama yang sudah diurutkan secara alfabet.
+
+#### Kompleksitas waktu & ruang
+1. Analisis Kompleksitas Waktu Bubble Sort:
+  Dalam algoritma Bubble Sort, terdapat dua loop bersarang: loop luar untuk mengiterasi melalui setiap elemen dalam vektor, dan loop dalam untuk membandingkan setiap pasangan elemen. Algoritma memerlukan waktu O(n^2), di mana n adalah jumlah elemen dalam vektor, karena pada setiap iterasi, algoritma harus membandingkan setiap pasangan elemen.
+2. Analisis Kompleksitas Ruang Bubble Sort:
+  Algoritma ini menggunakan ruang tambahan yang konstan, yaitu variabel sementara untuk menukar elemen dalam vektor. Oleh karena itu, kompleksitas ruangnya adalah O(1), yang berarti ruang yang dibutuhkan tidak bergantung pada ukuran vektor.
+
+#### Kesimpulan
+Dengan demikian, secara keseluruhan, kompleksitas waktu Bubble Sort adalah O(n^2) dalam kasus terburuk dan rata-rata, dan kompleksitas ruangnya adalah O(1). Ini menunjukkan bahwa algoritma ini mungkin tidak efisien untuk vektor besar karena memerlukan waktu yang lebih lama untuk diurutkan.
+
+### 3. [Soal]
+![soal-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/ee223134-ff5a-47eb-99d9-4fbb8d43342a)
 
 #### Output:
-![unguided-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/2feb5845-d15e-4629-9d71-5899c3d4a852)
-Kode diatas adalah contoh penggunaan tipe data vektor. Fungsi yang memberikan keluaran integer dideklarasi pada awal kode yang melakukan operasi perkalian. Fungsi tersebut menerima satu parameter bernama x. Pada fungsi main() sebuah variabel numbers dibuat dengan tipe data vektor yang memiliki 5 elemen. Selanjutnya fungsi transform digunakan untuk memproses setiap data pada vektor numbers agar dilakuakn perkalian menggunakan fungsi multiplyByTwo yang sebelumnya sudah dideklarasi. Terakhir dilakukan perulangan pada doubledNumbers yang mana variabel tersebut merupakan hasil dari pemrosesan sebelumnya. Pada perulangan tersebut seluruh elemen dicetak satu-persatu.
+![unguided-3](https://github.com/anggunna/Struktur-Data-Assignment/assets/157208635/759a763f-8a2d-4ebf-ad07-01784e153906)
 
-## Kesimpulan
-Berikut adalah ringkasan dan interpretasi umum tentang tipe data dalam bahasa C++ berdasarkan praktikum dan  tugas yang diberikan:
+#### Interpretasi
+Kode diatas adalah program sederhana untuk mengurutkan karakter secara ascending dan descending. Maka, program meminta pengguna untuk memasukkan jumlah karakter yang ingin diurutkan untuk memasukkan karakter sejumlah n sesuai dengan jumlah yang dimasukkan sebelumnya. Dengan karakter dimasukan kedalam 'array characters'. Setelah pengguna memasukkan karakter, program akan menampilkan karakter sebelum pengurutan menggunakan fungsi displayCharacters(). Dan program akan melakukan pengurutan karakter secara menaik (ascending) menggunakan fungsi sort() dari library algorithm. Hasil pengurutan menaik akan ditampilkan kepada pengguna. Selanjutnya, program akan melakukan pengurutan karakter secara menurun (descending) menggunakan fungsi sort() dengan argumen greater<char>() untuk mengurutkan dari besar ke kecil. Hasil pengurutan menurun akan ditampilkan kepada pengguna.
 
-C++ memiliki tipe data primitif seperti int, float, char, dan bool, yang digunakan untuk menyimpan nilai sederhana seperti bilangan bulat, pecahan, karakter, dan kebenaran. Selain itu, C++ juga mendukung struktur data kompleks seperti array, struct, dan class. Array dan vektor, sebagai tipe data koleksi, memungkinkan penyimpanan sejumlah nilai dalam satu variabel, dengan vektor lebih dinamis karena dapat mengubah ukurannya saat runtime. 
+#### Kompleksitas waktu & ruang
+1. Analisis Kompleksitas Waktu Sort :
+  Fungsi 'std::sort' biasanya menggunakan algoritma Quicksort atau introsort (yang merupakan variasi dari Quicksort), yang memiliki kompleksitas waktu rata-rata O(n log n). Namun, kompleksitas waktu Quicksort dapat menjadi O(n^2) dalam kasus terburuk, tergantung pada implementasi dan data input. Jumlah panggilan ke 'std::sort' dalam kode adalah dua kali, sehingga total kompleksitas waktu untuk sorting adalah O(2 * n log n), atau O(n log n) dalam kompleksitas waktu rata-rata.
+2. Analisis Kompleksitas Ruang Sort :
+  Kode menggunakan array characters untuk menyimpan karakter input, yang membutuhkan ruang O(n). Oleh karena itu, kompleksitas ruang keseluruhan adalah O(n + log n), yang lebih disederhanakan menjadi O(n) karena ruang yang dominan adalah ruang yang bergantung pada jumlah karakter yang dimasukkan.
 
-Fungsi dalam C++ adalah blok kode yang dapat dipanggil dengan suatu nama, bisa mengembalikan nilai atau tidak, dan menerima parameter. Penggunaan std::map untuk menyimpan pasangan kunci-nilai memberikan cara efisien untuk pencarian berbasis kunci. Pentingnya memilih tipe data yang tepat dalam pemrograman untuk efisiensi dan kejelasan kode sangatlah penting, karena pemahaman tentang tipe data memungkinkan pemrogram membuat keputusan yang tepat dalam penyimpanan dan manipulasi data.
+#### Kesimpulan
+Dengan demikian, secara keseluruhan, kompleksitas waktu rata-rata adalah O(n log n) dan kompleksitas ruang adalah O(n).
 
 ## Referensi
-[1] Anita Sindar (2019). Struktur Data dan Algoritma Dengan C++. Sumatra Utara : CV. AA. RIZKY.
-[2] Meidyan Permata Putri, Guntoro Barovih, Rezania Agramanisti Azdy, Yuniansyah, Andri Saputra, Yesi Sriyeni, Arsia Rini, Fadhila Tangguh Admojo. Bandung : Grup CV. Widina Media Utama.
-[3] Antonius Rachmat C. (2010). Algoritma dan Pemrograman dengan Bahasa C. Yogyakarta: AndiOffset.
-[4] Pemburukode.com. (2023, 16 Februari). Pengenalan Tentang Tipe Data Primitif dan Bukan Primitif di Bahasa Pemrograman C++. 
-[5] GeeksforGeeks. (2024, 11 Maret). Abstract Data Types.
+[1] International Journal of Image and Graphics. (2021). An Enhanced Bidirectional Insertion Sort Over Classical Insertion Sort. International Journal of Image and Graphics, 21(2), 2150024.
+
+[2] E. L. Pratiwi, Konsep Dasar Algoritma dan Pemrograman dengan Bahasa Java. Banjarmasin: Poiban Press, 2020.
+
+[3]Sandria, Y. A., Nurhayoto, M. R. A., Ramadhani, L., Harefa, R. S., & Syahputra, A. (2022). Penerapan Algoritma Selection Sort untuk Melakukan Pengurutan Data dalam Bahasa Pemrograman PHP. Hello World Jurnal Ilmu Komputer, 1(4), 190–194. https://doi.org/10.56211/helloworld.v1i4.187.
+
+[4] Nasution, R., Syahputra, A., Widiyanto, A., Subuhanto, D., & Abdillah, A. Y. (2023). Persepsi Mahasiswa Informatika Terhadap Keefektifan Algoritma Bubble Sort dalam Mengurutkan Data. Blend Sains Jurnal Teknik, 1(3), 220–225. https://doi.org/10.56211/blendsains.v1i3.186.
+
+[5] Sunandar, E. (2019). Perbandingan Metode Selection Sort dan Insertion Sort Dalam Pengurutan Data Menggunakan Bahasa Program Java. PETIR, 12(2), 172–178. https://doi.org/10.33322/petir.v12i2.485
