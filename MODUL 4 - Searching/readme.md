@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
+# <h1 align="center">Laporan Praktikum Modul Searching</h1>
 <p align="center">Anggun Dewanti (2311110022)</p>
 
 ## Dasar Teori
